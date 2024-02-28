@@ -7,7 +7,7 @@ https://github.com/fluffels/bibtex-csv/blob/master/convert.py
 
 사용법
 자세한 내용은 README.md 참조
-python3 conv-jylee.py < test.bib > output.csv
+python3 conv.py < test.bib > output.csv
 """
 
 from os import getcwd
