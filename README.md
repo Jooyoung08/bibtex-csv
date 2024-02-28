@@ -1,37 +1,126 @@
-bibtex-csv
-==========
-
-Converts bibtex files to CSV.
-
-Overview
+# 개요
 --------
 
-This program converts bibliography databases stored in the BibTeX / BibLaTeX format to the comma-separated value format.
+논문의 정보를 csv 포맷으로 내보내는 프로그램.
 
-Dependencies
-------------
-
-This script requires Python 3.3.3.
-It was not tested with other versions of Python.
-Python 2 will definitely not work.
-
-Usage
------
-
-Input is via standard input, output is via standard output.
-Files can be processed using your operating system's built in file pipe / redirection operators (see examples below).
-
-Examples
+# 테스트 환경
 --------
 
-* Converting a single .bib file:
+## OS
+
+Rocky Linux 9.3
+
+## Python
+
+이 코드는 Python 3.9.18 에서 테스트 되었음.
+
+## BibTex
+
+BibTex 파일을 생성하는데 다음과 같은 프로그램을 사용.
+BibTex에 적절한 정보를 생성하기 위해 적절한 셋팅이 필요함.
+
+### Zotero
+
+Zotero 6.0.30
+https://www.zotero.org/
+
+### Zotero Extension
+
+Better BibTex for Zotero 6.7.160
+https://retorque.re/zotero-better-bibtex/
+
+# 사용법
+--------
+
+## 코드 다운로드
+
+### git 설치 (optional)
+
+#### Rocky Linux/Cent OS/Redhat
 
 ```sh
-./convert.py < bibliography.bib > spreadsheet.csv
+sudo dnf install git
 ```
 
-* Converting multiple .bib files:
+#### Ubuntu
 
 ```sh
-cat *.bib | ./convert.py > spreadsheet.csv
+sudo apt-get install git
+```
 
+#### Mac
+
+git이 기본적으로 설치되지 않은 경우,
+brew 패키지 매니져를 이용하여 git 설치
+참조 : https://brew.sh/ko/
+
+```sh
+brew install git
+```
+
+### git을 통한 다운로드
+
+터미널(Terminal)을 실행하고,
+이 코드를 다운로드할 위치로 이동
+
+```sh
+git clone https://github.com/Jooyoung08/bibtex-csv.git
+```
+
+### GitHub에서 소스 다운로드
+
+다운로드가 완료되면 터미널(Terminal)을 실행하고,
+
+```sh
+cd ~/Downloads
+unzip bibtex-csv-master.zip
+```
+
+## 코드 편집
+
+해당 디렉토리로 이동
+
+```sh
+cd bibtex-csv
+```
+
+코드 편집
+
+```sh
+vi bibtex-jylee.py
+```
+bibtex 파일에 저장된 정보를 확인 후, 개인 목적에 맞게 코드를 편집.
+
+### 코드 편집이 안되는 경우
+
+파일의 권한 확인 후, 변경
+
+## 실행
+
+```sh
+python3 conv-jylee.py < test.bib > test.csv
+```
+
+---
+
+# 기타
+
+## 샘플 bibtex 파일에 포함된 내용
+
+현재 테스트 용도로 만들어진 BibTex(test.bib)에 포함된 정보
+
+| Item | Details |
+| ---- | ----- |
+| abstract | 초록 |
+| author | 저자 |
+| doi | DOI |
+| issn | ISSN |
+| issue | Issue |
+| journal | 저널 이름 |
+| keywords | 핵심어 |
+| month | 게제 월 |
+| pages | 논문 페이지 |
+| publisher | 출판사 이름 |
+| title | 논문 제목 |
+| volume | 권(Vol.) |
+| year | 게제 연도 |
