@@ -87,7 +87,7 @@ cd bibtex-csv
 코드 편집
 
 ```sh
-vi bibtex-jylee.py
+vi conv.py
 ```
 bibtex 파일에 저장된 정보를 확인 후, 개인 목적에 맞게 코드를 편집.
 
@@ -98,7 +98,7 @@ bibtex 파일에 저장된 정보를 확인 후, 개인 목적에 맞게 코드�
 ## 실행
 
 ```sh
-python3 conv-jylee.py < test.bib > test.csv
+python3 conv.py < test.bib > test.csv
 ```
 
 ---
