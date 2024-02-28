@@ -125,3 +125,26 @@ python3 conv.py < test.bib > test.csv
 | volume | 권(Vol.) |
 | year | 게제 연도 |
 
+---
+
+## 윈도우에서 사용 방법
+
+### 파이썬 설치
+
+1. 윈도우 Microsoft Store 실행
+
+2. Python 검색
+
+3. 파이썬 최신 버전 설치
+
+### 코드 실행
+
+1. Windows PowerShell 실행
+
+2. 코드가 있는 디렉토리로 이동
+
+3. 코드 실행
+
+```sh
+cmd \c 'python conv.py < test.bib > test.csv'
+```
