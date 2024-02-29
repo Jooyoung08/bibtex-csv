@@ -97,6 +97,7 @@ for entry in entries:
     issn = "NA"
     if "issn" in entry:
         issn = entry["issn"]
+        issn = "-".join([issn[:4], issn[4:]])
 
     #논문 DOI
     doi = "NA"
