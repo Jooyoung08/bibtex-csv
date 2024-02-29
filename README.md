@@ -98,7 +98,7 @@ bibtex 파일에 저장된 정보를 확인 후, 개인 목적에 맞게 코드�
 ## 실행
 
 ```sh
-python3 conv.py < test.bib > test.csv
+python3 conv.py < test.bib > output.csv
 ```
 
 ---
@@ -146,5 +146,5 @@ python3 conv.py < test.bib > test.csv
 3. 코드 실행
 
 ```sh
-cmd \c 'python conv.py < test.bib > test.csv'
+cmd \c 'python conv.py < test.bib > output.csv'
 ```
