@@ -55,6 +55,8 @@ for entry in entries:
     Nauthor = len(spAu)
     new_list = [i.strip() for i in spAu]
     #저자 (resist에 저장된 저자만 출력)
+    #모든 저자를 출력하려면 아래 두 줄 주석 처리후
+    #new_list를 author로 변경
     f_au = set(new_list) & set(regist)
     author = ','.join(f_au)
 
