@@ -40,7 +40,7 @@ for line in stdin:
 # 아래 실제 정보과 일치하는지 확인 필요
 # 데이터 구분을 위해 "|" 사용
 # "공백", "," 등의 문자도 사용 가능
-print("Title|Journal|ISSN|DOI|Vol|Issue|Year|Month|page|Number of Author|Authors")
+print("Title|Journal|ISSN|DOI|Vol|Issue|Year|Month|page|Number of Author|Authors|Abstract")
 
 entries.append(entry)
 
@@ -57,6 +57,11 @@ for entry in entries:
     #저자 (resist에 저장된 저자만 출력)
     f_au = set(new_list) & set(regist)
     author = ','.join(f_au)
+
+    #초록
+    abstract = "NA"
+    if "abstract" in entry:
+        abstract = entry["abstract"]
 
     #논문 제목
     title = "NA"
@@ -104,7 +109,7 @@ for entry in entries:
     if "doi" in entry:
         doi = entry["doi"]
 
-    print("{}|{}|{}|{}|{}|{}|{}|{}|{}|{}|{}".format(title, journal, issn, doi, volume, issue, year, month, pages, Nauthor, author))
+    print("{}|{}|{}|{}|{}|{}|{}|{}|{}|{}|{}|{}".format(title, journal, issn, doi, volume, issue, year, month, pages, Nauthor, author, abstract))
 
 # Python 기본 문법 확인
 # 현재 코드는 [논문 제목, 저널 이름, ISSN, DOI, Vol, Issue, 게제 연도, 게제 월, 페이지, 총 저자 수, 저자] 데이터 출력
